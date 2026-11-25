@@ -1,0 +1,518 @@
+.specialty-page.specialty-optometry {
+  --optometry-navy: #101d31;
+  --optometry-navy-deep: #0a1424;
+  --optometry-gold: #dfbd7e;
+  --optometry-gold-light: #edd7a8;
+  --optometry-ivory: #f7f2e8;
+  --optometry-ink: #1c2736;
+  --practice-primary: var(--optometry-navy);
+  --practice-tint: var(--optometry-ivory);
+  --specialty-accent: var(--optometry-gold);
+  --color-accent: var(--optometry-gold);
+  --color-accent-ink: var(--optometry-navy);
+  color: var(--optometry-ink);
+  background: var(--optometry-ivory);
+}
+.specialty-optometry .container { width: min(1200px, calc(100% - 72px)); }
+.specialty-optometry .site-header {
+  z-index: calc(var(--z-header) + 1);
+  margin-bottom: -76px;
+  color: #fff;
+  border: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+.specialty-optometry .site-header.is-scrolled {
+  background: rgba(10, 20, 36, .97);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .22);
+}
+.specialty-optometry .header-inner { min-height: 76px; }
+.specialty-optometry .practice-brand { color: #f6f1e7; }
+.specialty-optometry .practice-brand .brand-mark {
+  width: 30px;
+  height: 30px;
+  color: var(--optometry-gold);
+  border: 1px solid rgba(223, 189, 126, .68);
+  border-radius: 50%;
+  background: transparent;
+}
+.specialty-optometry .practice-brand .brand-lockup small { color: var(--optometry-gold); }
+.specialty-optometry .primary-nav { gap: clamp(14px, 1.8vw, 25px); font-size: 11px; }
+.specialty-optometry .primary-nav > a:not(.nav-cta) { color: #f0eee9; }
+.specialty-optometry .primary-nav > a:not(.nav-cta):hover,
+.specialty-optometry .primary-nav > a[aria-current="location"] { color: var(--optometry-gold-light); }
+.specialty-optometry .nav-cta,
+.specialty-optometry .nav-cta:hover { color: var(--optometry-navy); background: var(--optometry-gold); }
+.specialty-optometry :is(a, button, summary, input, select, textarea):focus-visible {
+  outline: 3px solid #c9943f;
+  outline-offset: 3px;
+}
+.optometry-hero {
+  position: relative;
+  min-height: clamp(490px, 53vw, 650px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #f8f6f0;
+  background: var(--optometry-navy) url("../images/backgrounds/01-midnight-navy-gold.jpg") center / cover;
+}
+.optometry-hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 20, 36, .98) 0%, rgba(10, 20, 36, .91) 34%, rgba(10, 20, 36, .47) 61%, rgba(10, 20, 36, .08) 100%);
+  content: "";
+}
+.optometry-hero-photo {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 33%;
+  overflow: hidden;
+  clip-path: ellipse(100% 143% at 92% 50%);
+}
+.optometry-hero-photo::before {
+  position: absolute;
+  z-index: 1;
+  inset: -18% auto -18% -7%;
+  width: 24%;
+  border-right: 1px solid rgba(223, 189, 126, .8);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(7deg);
+}
+.optometry-hero-photo::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 20, 36, .52), transparent 50%, rgba(10, 20, 36, .06));
+  content: "";
+}
+.optometry-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 34% center; }
+.optometry-hero-inner { position: relative; z-index: 1; padding-top: 114px; padding-bottom: 90px; }
+.optometry-hero-copy { max-width: 610px; }
+.optometry-hero .eyebrow,
+.optometry-about .eyebrow,
+.optometry-services-intro .eyebrow,
+.optometry-appointment-cta .eyebrow { color: var(--optometry-gold); font-size: 10px; letter-spacing: .19em; }
+.optometry-hero .eyebrow { margin-bottom: 19px; }
+.optometry-hero .eyebrow span { margin-right: 8px; font-size: 16px; }
+.optometry-hero h1 {
+  max-width: 570px;
+  margin: 0 0 15px;
+  color: #f8f6f0;
+  font-family: var(--serif);
+  font-size: clamp(48px, 5.8vw, 76px);
+  font-weight: 400;
+  letter-spacing: -.06em;
+  line-height: .96;
+}
+.optometry-hero h1 em,
+.optometry-about h2 em { color: var(--optometry-gold-light); font-style: normal; }
+.optometry-hero-copy > p:not(.eyebrow) { max-width: 460px; margin-bottom: 21px; color: #d7dce1; font-size: 14px; line-height: 1.65; }
+.optometry-hero .hero-actions { gap: 12px; }
+.specialty-optometry .button-gold {
+  color: var(--optometry-navy);
+  border-color: var(--optometry-gold);
+  background: var(--optometry-gold);
+}
+.specialty-optometry .button-gold:hover {
+  color: var(--optometry-navy);
+  border-color: var(--optometry-gold-light);
+  background: var(--optometry-gold-light);
+  transform: translateY(-2px);
+}
+.specialty-optometry .optometry-hero .button-outline { color: #f7f4ed; border-color: rgba(247, 244, 237, .57); }
+.specialty-optometry .optometry-hero .button-outline:hover { color: var(--optometry-navy); background: #f7f4ed; }
+.optometry-gold-sweep {
+  position: absolute;
+  right: -5%;
+  bottom: -38px;
+  left: -5%;
+  height: 73px;
+  border-top: 1px solid rgba(223, 189, 126, .78);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: var(--optometry-ivory);
+}
+.optometry-trust { position: relative; z-index: 1; color: #f3efe7; background: var(--optometry-navy-deep); }
+.optometry-trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.optometry-trust-grid > div {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-right: 1px solid rgba(223, 189, 126, .22);
+}
+.optometry-trust-grid > div:first-child { padding-left: 0; }
+.optometry-trust-grid > div:last-child { padding-right: 0; border-right: 0; }
+.optometry-trust-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(223, 189, 126, .57);
+  border-radius: 50%;
+  color: var(--optometry-gold);
+  font-size: 18px;
+}
+.optometry-trust-grid strong,
+.optometry-trust-grid small { display: block; }
+.optometry-trust-grid strong { font-family: var(--serif); font-size: 13px; font-weight: 400; }
+.optometry-trust-grid small { margin-top: 2px; color: #bdc5cc; font-size: 10px; }
+.optometry-services {
+  padding-block: 74px;
+  background: var(--optometry-ivory) url("../images/backgrounds/02-warm-ivory-gold.jpg") center / cover;
+}
+.optometry-services .container {
+  display: grid;
+  grid-template-columns: minmax(200px, .85fr) minmax(0, 3.15fr);
+  align-items: center;
+  gap: clamp(22px, 3.4vw, 48px);
+}
+.optometry-services-intro h2,
+.optometry-about h2 {
+  margin: 0 0 13px;
+  font-family: var(--serif);
+  font-size: clamp(31px, 3.35vw, 45px);
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: 1.03;
+}
+.optometry-services-intro h2 em { color: #9c7d48; font-style: normal; }
+.optometry-services-intro > p:not(.eyebrow) { margin: 0 0 17px; color: #64645f; font-size: 12px; line-height: 1.6; }
+.optometry-services-intro .text-link { color: #755c31; }
+.optometry-service-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.optometry-service-card {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 0 13px;
+  border: 1px solid rgba(105, 85, 53, .15);
+  border-radius: 5px;
+  background: rgba(255, 253, 248, .92);
+  box-shadow: 0 8px 20px rgba(44, 37, 25, .08);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.optometry-service-card:hover { transform: translateY(-4px); box-shadow: 0 13px 26px rgba(44, 37, 25, .14); }
+.optometry-service-image { height: 95px; margin-bottom: 11px; overflow: hidden; background: #e8dfd0; }
+.optometry-service-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.optometry-service-card:hover .optometry-service-image img { transform: scale(1.05); }
+.optometry-image-exam img { object-position: 30% center; }
+.optometry-image-frames img { object-position: 96% center; }
+.optometry-image-lenses img { object-position: 62% center; }
+.optometry-image-children img { object-position: 14% center; }
+.optometry-image-health img { object-position: 46% center; }
+.optometry-service-card .care-kicker { position: static; display: block; margin: 0 10px 5px; color: #8c7449; font-size: 7px; letter-spacing: .1em; }
+.optometry-service-card h3 { min-height: 39px; margin: 0 10px 5px; color: var(--optometry-ink); font-family: var(--serif); font-size: 15px; font-weight: 500; letter-spacing: -.025em; line-height: 1.15; }
+.optometry-service-card p { min-height: 48px; margin: 0 10px 8px; color: #64645f; font-size: 10px; line-height: 1.45; }
+.optometry-service-card .text-link { margin: 0 10px; color: #755c31; font-size: 9px; }
+.optometry-about {
+  color: #f7f4ed;
+  background: var(--optometry-navy) url("../images/backgrounds/06-midnight-blue-silk.jpg") center / cover;
+}
+.optometry-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(170px, .62fr);
+  align-items: center;
+  gap: clamp(22px, 3.6vw, 50px);
+}
+.optometry-about-photo { position: relative; min-width: 0; margin: 0; padding: 0 20px 20px 0; }
+.optometry-about-photo::before {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  bottom: 0;
+  left: 18px;
+  border: 1px solid rgba(223, 189, 126, .7);
+  content: "";
+}
+.optometry-about-photo img { position: relative; width: 100%; height: clamp(240px, 23vw, 330px); object-fit: cover; object-position: 49% center; }
+.optometry-about-photo figcaption {
+  position: absolute;
+  bottom: 4px;
+  left: 18px;
+  padding: 11px 14px;
+  color: var(--optometry-ink);
+  background: var(--optometry-gold);
+  font-family: var(--serif);
+  font-size: 12px;
+}
+.optometry-photo-mark {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 50%;
+  color: white;
+  font-size: 19px;
+}
+.optometry-about-copy { max-width: 430px; }
+.optometry-about h2 { margin-bottom: 12px; color: #f7f4ed; font-size: clamp(35px, 3.8vw, 50px); }
+.optometry-about-copy > p:not(.eyebrow, .demo-disclaimer) { margin-bottom: 13px; color: #cbd2d7; font-size: 12px; line-height: 1.6; }
+.optometry-about-points { display: grid; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
+.optometry-about-points li { display: flex; align-items: center; gap: 9px; color: #e4e5e3; font-size: 10px; }
+.optometry-about-points li > span { color: var(--optometry-gold); }
+.optometry-about-points small { color: #b7c0c9; font-size: 8px; }
+.optometry-about .demo-disclaimer { margin: 0 0 14px; color: #adb8c3; font-size: 9px; }
+.optometry-vision-note { padding: 22px 14px; border: 1px solid rgba(223, 189, 126, .59); text-align: center; }
+.optometry-glasses-icon { display: block; color: var(--optometry-gold); font-size: 40px; line-height: 1.15; }
+.optometry-vision-note p { margin: 8px 0 14px; color: #f5f0e5; font-family: var(--serif); font-size: 19px; line-height: 1.25; }
+.optometry-vision-note p em { color: var(--optometry-gold-light); font-style: normal; }
+.optometry-vision-note .button { min-height: 40px; padding: 9px 11px; font-size: 9px; }
+.optometry-appointment-cta {
+  position: relative;
+  overflow: hidden;
+  color: var(--optometry-ink);
+  background: var(--optometry-ivory) url("../images/backgrounds/02-warm-ivory-gold.jpg") center / cover;
+}
+.optometry-cta-image { position: absolute; inset: 0 auto 0 0; width: 34%; overflow: hidden; clip-path: ellipse(98% 140% at 0% 50%); }
+.optometry-cta-image::after { position: absolute; inset: 0; background: linear-gradient(90deg, transparent 52%, rgba(247, 242, 232, .28)); content: ""; }
+.optometry-cta-image img { width: 100%; height: 100%; object-fit: cover; object-position: 95% center; }
+.optometry-appointment-cta-inner { min-height: 145px; display: flex; align-items: center; justify-content: flex-end; gap: 24px; padding-left: 35%; }
+.optometry-appointment-cta-inner > div { margin-right: auto; }
+.optometry-appointment-cta .eyebrow { margin-bottom: 5px; color: #8d7041; font-size: 8px; }
+.optometry-appointment-cta h2 { margin: 0 0 4px; color: var(--optometry-ink); font-family: var(--serif); font-size: clamp(22px, 2.8vw, 33px); font-weight: 400; }
+.optometry-appointment-cta p:not(.eyebrow) { margin: 0; color: #64645f; font-size: 11px; }
+.optometry-appointment-cta .button { flex: 0 0 auto; white-space: nowrap; }
+.specialty-optometry .practice-details,
+.specialty-optometry .book-section {
+  background: var(--optometry-ivory) url("../images/backgrounds/02-warm-ivory-gold.jpg") center / cover;
+}
+.specialty-optometry .practice-details .eyebrow,
+.specialty-optometry .practice-faq .eyebrow,
+.specialty-optometry .book-section .eyebrow { color: #8d7041; }
+.specialty-optometry .practice-details .section-heading h2,
+.specialty-optometry .practice-faq .section-heading h2,
+.specialty-optometry .book-copy h2 { color: var(--optometry-ink); font-family: var(--serif); font-weight: 400; letter-spacing: -.055em; }
+.specialty-optometry .practice-details .section-heading h2 em,
+.specialty-optometry .practice-faq .section-heading h2 em,
+.specialty-optometry .book-copy h2 em { color: #927344; }
+.specialty-optometry .practice-card { border-color: rgba(105, 85, 53, .2); background: rgba(255, 253, 248, .84); }
+.specialty-optometry .practice-card h3 { color: var(--optometry-navy); font-family: var(--serif); font-size: 19px; font-weight: 500; }
+.specialty-optometry .practice-card a,
+.specialty-optometry .practice-faq-list summary { color: #755c31; }
+.specialty-optometry .practice-faq {
+  background: #f4efe5 url("../images/backgrounds/04-pearl-white-curves.jpg") center / cover;
+}
+.specialty-optometry .practice-faq-list details { border-color: rgba(105, 85, 53, .22); }
+.specialty-optometry .practice-emergency { background: #142a40; }
+.specialty-optometry .practice-emergency h2 { color: #f7f4ed; font-family: var(--serif); font-weight: 400; }
+.specialty-optometry .practice-emergency p { color: #cbd2d7; }
+.specialty-optometry .practice-emergency .button { color: var(--optometry-navy); background: var(--optometry-gold); }
+.specialty-optometry .book-grid { gap: clamp(35px, 7vw, 90px); }
+.specialty-optometry .book-copy h2 { font-size: clamp(38px, 4vw, 52px); }
+.specialty-optometry .book-copy > p:not(.eyebrow) { color: #64645f; }
+.specialty-optometry .book-contact > span:first-child { color: var(--optometry-navy); background: rgba(223, 189, 126, .3); }
+.specialty-optometry .booking-form {
+  border: 1px solid rgba(105, 85, 53, .22);
+  border-top: 3px solid var(--optometry-gold);
+  border-radius: 3px;
+  background: rgba(255, 253, 248, .94);
+  box-shadow: 0 18px 44px rgba(39, 33, 23, .08);
+}
+.specialty-optometry .booking-form .form-heading { color: #765f39; }
+.specialty-optometry .booking-form :is(input, select, textarea) { border-color: #d8d1c3; border-radius: 2px; background: #fffefa; }
+.specialty-optometry .booking-form .button-dark { color: var(--optometry-navy); background: var(--optometry-gold); }
+.specialty-optometry .booking-form .button-dark:hover { background: var(--optometry-gold-light); }
+.specialty-optometry .specialty-back { color: #f7f4ed; background: var(--optometry-navy); }
+.specialty-optometry .specialty-back p { color: #f7f4ed; }
+.specialty-optometry .specialty-back .button-outline { color: #f7f4ed; border-color: rgba(247, 244, 237, .6); }
+.specialty-optometry .specialty-back .button-outline:hover { color: var(--optometry-navy); background: #f7f4ed; }
+.specialty-optometry .site-footer {
+  color: #f4f1e9;
+  background: #101114 url("../images/backgrounds/05-charcoal-metallic.jpg") center / cover;
+}
+.optometry-footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr 1fr 1fr;
+  gap: clamp(25px, 5vw, 70px);
+  padding-block: 44px 34px;
+}
+.optometry-footer-grid h2 { margin: 0 0 13px; color: var(--optometry-gold); font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.optometry-footer-grid nav { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+.optometry-footer-grid nav a,
+.optometry-footer-brand > a:not(.brand),
+.optometry-footer-contact > p { color: #c3cbd1; font-size: 10px; }
+.optometry-footer-grid nav a:hover,
+.optometry-footer-brand > a:not(.brand):hover { color: var(--optometry-gold-light); }
+.optometry-footer-brand > p { max-width: 190px; margin: 14px 0 8px; color: #c3cbd1; font-family: var(--serif); font-size: 13px; }
+.optometry-footer-contact > p { margin: 0 0 8px; }
+.optometry-footer-contact .button { min-height: 38px; margin-top: 5px; padding: 8px 11px; font-size: 9px; }
+.specialty-optometry .site-footer .footer-bottom { border-top: 1px solid rgba(223, 189, 126, .21); }
+.specialty-optometry .site-footer .compliance-note { color: #aeb8c2; }
+.specialty-optometry .brand-footer .brand-mark { color: var(--optometry-gold); border-color: var(--optometry-gold); }
+.specialty-optometry .mobile-actions { border-color: rgba(223, 189, 126, .3); background: rgba(10, 20, 36, .98); }
+.specialty-optometry .mobile-actions a { color: #f4f1e9; }
+.specialty-optometry .mobile-actions a:last-child { color: var(--optometry-navy); background: var(--optometry-gold); }
+
+@media (max-width: 980px) {
+  .specialty-optometry .container { width: min(100% - 48px, 820px); }
+  .specialty-optometry .primary-nav { gap: 12px; font-size: 10px; }
+  .specialty-optometry .primary-nav > a:not(.nav-cta):nth-child(5) { display: none; }
+  .optometry-hero { min-height: 550px; }
+  .optometry-hero-photo { left: 28%; }
+  .optometry-hero h1 { font-size: clamp(48px, 6vw, 62px); }
+  .optometry-trust-grid > div { gap: 8px; padding-inline: 10px; }
+  .optometry-trust-grid strong { font-size: 11px; }
+  .optometry-trust-grid small { font-size: 9px; }
+  .optometry-services .container { grid-template-columns: 1fr; gap: 24px; }
+  .optometry-services-intro { display: grid; grid-template-columns: 1fr auto; align-items: end; column-gap: 20px; }
+  .optometry-services-intro .eyebrow,
+  .optometry-services-intro h2,
+  .optometry-services-intro > p:not(.eyebrow) { grid-column: 1; }
+  .optometry-services-intro .text-link { grid-column: 2; grid-row: 2 / span 2; margin-bottom: 8px; }
+  .optometry-service-image { height: 115px; }
+  .optometry-about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 27px; }
+  .optometry-vision-note { grid-column: 2; display: flex; align-items: center; justify-content: center; gap: 15px; padding: 12px; }
+  .optometry-glasses-icon { font-size: 30px; }
+  .optometry-vision-note p { margin: 0; font-size: 16px; }
+  .optometry-vision-note .button { flex: 0 0 auto; }
+  .optometry-appointment-cta-inner { padding-left: 32%; }
+  .optometry-footer-grid { gap: 24px; }
+}
+@media (max-width: 680px) {
+  .specialty-optometry .container { width: calc(100% - 40px); }
+  .specialty-optometry .site-header { margin-bottom: -66px; }
+  .specialty-optometry .header-inner { min-height: 66px; }
+  .specialty-optometry .menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px;
+    border: 1px solid rgba(223, 189, 126, .6);
+    border-radius: 50%;
+    background: rgba(10, 20, 36, .42);
+  }
+  .specialty-optometry .menu-toggle > span:not(.sr-only) { background: #f7f4ed; }
+  .specialty-optometry .primary-nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 19px;
+    border-bottom: 1px solid rgba(223, 189, 126, .34);
+    background: rgba(10, 20, 36, .98);
+    box-shadow: 0 15px 28px rgba(0, 0, 0, .22);
+  }
+  .specialty-optometry .primary-nav.is-open { display: flex; flex-direction: column; }
+  .specialty-optometry .primary-nav > a:not(.nav-cta) { min-height: 46px; display: flex; align-items: center; padding: 8px 2px; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .specialty-optometry .primary-nav > a:not(.nav-cta):nth-child(5) { display: flex; }
+  .specialty-optometry .primary-nav .nav-cta { min-height: 44px; justify-content: center; margin-top: 13px; }
+  .optometry-hero { min-height: 635px; align-items: flex-start; }
+  .optometry-hero::before { background: linear-gradient(180deg, rgba(10, 20, 36, .95) 0%, rgba(10, 20, 36, .91) 42%, rgba(10, 20, 36, .12) 100%); }
+  .optometry-hero-photo { inset: auto 0 0 0; height: 53%; clip-path: ellipse(110% 100% at 70% 100%); }
+  .optometry-hero-photo::before { inset: -10% auto -10% 12%; width: 35%; transform: rotate(-15deg); }
+  .optometry-hero-photo::after { background: linear-gradient(180deg, rgba(10, 20, 36, .2), transparent 45%, rgba(10, 20, 36, .1)); }
+  .optometry-hero-inner { padding-top: 111px; padding-bottom: 245px; }
+  .optometry-hero .eyebrow { margin-bottom: 18px; font-size: 8px; }
+  .optometry-hero h1 { max-width: 470px; margin-bottom: 12px; font-size: clamp(42px, 11vw, 55px); line-height: 1.01; }
+  .optometry-hero-copy > p:not(.eyebrow) { max-width: 410px; margin-bottom: 16px; font-size: 13px; }
+  .optometry-hero .hero-actions { flex-wrap: wrap; gap: 9px; }
+  .optometry-hero .button { min-height: 44px; gap: 10px; padding: 10px 13px; font-size: 10px; }
+  .optometry-gold-sweep { right: -14%; bottom: -39px; left: -14%; height: 66px; }
+  .optometry-trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .optometry-trust-grid > div { min-height: 67px; gap: 8px; padding: 9px 7px; border-right: 1px solid rgba(223, 189, 126, .22); border-bottom: 1px solid rgba(223, 189, 126, .22); }
+  .optometry-trust-grid > div:nth-child(2n) { border-right: 0; }
+  .optometry-trust-grid > div:nth-last-child(-n + 2) { border-bottom: 0; }
+  .optometry-trust-grid > div:first-child { padding-left: 7px; }
+  .optometry-trust-icon { width: 29px; height: 29px; font-size: 15px; }
+  .optometry-trust-grid strong { font-size: 11px; }
+  .optometry-trust-grid small { font-size: 8px; }
+  .specialty-optometry .optometry-services { padding-block: 54px; }
+  .optometry-services .container { gap: 19px; }
+  .optometry-services-intro { display: block; }
+  .optometry-services-intro h2 { font-size: clamp(31px, 8vw, 41px); }
+  .optometry-services-intro > p:not(.eyebrow) { max-width: 390px; }
+  .optometry-services-intro .text-link { margin: 0; }
+  .optometry-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .optometry-service-image { height: 96px; }
+  .optometry-service-card h3 { min-height: 36px; font-size: 15px; }
+  .optometry-service-card p { min-height: 49px; font-size: 9px; }
+  .optometry-service-card .care-kicker { font-size: 6px; }
+  .specialty-optometry .optometry-about { padding-block: 55px; }
+  .optometry-about-grid { grid-template-columns: 1fr; gap: 24px; }
+  .optometry-about-photo { width: calc(100% - 12px); justify-self: center; }
+  .optometry-about-photo img { height: 235px; }
+  .optometry-about-copy { max-width: none; }
+  .optometry-about h2 { font-size: clamp(36px, 9vw, 47px); }
+  .optometry-about-copy > p:not(.eyebrow, .demo-disclaimer) { font-size: 13px; }
+  .optometry-about-points li { font-size: 11px; }
+  .optometry-vision-note { grid-column: auto; justify-content: space-between; }
+  .optometry-appointment-cta { padding-block: 22px; }
+  .optometry-cta-image { width: 38%; opacity: .46; }
+  .optometry-appointment-cta-inner { min-height: 0; display: grid; grid-template-columns: 1fr; gap: 12px; padding-left: 22%; }
+  .optometry-appointment-cta-inner > div { margin: 0; }
+  .optometry-appointment-cta h2 { font-size: 22px; }
+  .optometry-appointment-cta p:not(.eyebrow) { font-size: 10px; }
+  .optometry-appointment-cta .button { justify-self: start; }
+  .specialty-optometry .practice-details,
+  .specialty-optometry .practice-faq,
+  .specialty-optometry .book-section { padding-block: 56px; }
+  .specialty-optometry .book-grid { gap: 26px; }
+  .specialty-optometry .booking-form { padding: 21px 17px; }
+  .specialty-optometry .practice-emergency { padding: 23px 20px; }
+  .optometry-footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; padding-block: 34px 26px; }
+  .optometry-footer-brand { grid-column: 1 / -1; }
+  .specialty-optometry .site-footer .footer-top { gap: 15px; }
+  .specialty-optometry .site-footer .footer-bottom { gap: 9px 14px; }
+}
+@media (max-width: 390px) {
+  .specialty-optometry .container { width: calc(100% - 32px); }
+  .optometry-hero { min-height: 650px; }
+  .optometry-hero h1 { font-size: clamp(39px, 10.4vw, 44px); }
+  .optometry-hero-inner { padding-bottom: 245px; }
+  .optometry-trust-grid > div { gap: 6px; }
+  .optometry-trust-grid small { font-size: 7px; }
+  .optometry-service-card { padding-bottom: 11px; }
+  .optometry-service-image { height: 82px; }
+  .optometry-service-card h3 { font-size: 14px; }
+  .optometry-vision-note { gap: 8px; padding: 11px 9px; }
+  .optometry-vision-note .button { padding-inline: 8px; font-size: 8px; }
+}
+@media (prefers-color-scheme: dark) {
+  .specialty-optometry .optometry-services,
+  .specialty-optometry .practice-details,
+  .specialty-optometry .practice-faq,
+  .specialty-optometry .book-section {
+    color: #f1eee8;
+    background-color: #121e2c;
+    background-image: linear-gradient(rgba(15, 25, 36, .93), rgba(15, 25, 36, .93)), url("../images/backgrounds/04-pearl-white-curves.jpg");
+  }
+  .specialty-optometry .optometry-services-intro h2,
+  .specialty-optometry .practice-details .section-heading h2,
+  .specialty-optometry .practice-faq .section-heading h2,
+  .specialty-optometry .book-copy h2 { color: #f1eee8; }
+  .specialty-optometry .optometry-services-intro h2 em,
+  .specialty-optometry .practice-details .section-heading h2 em,
+  .specialty-optometry .practice-faq .section-heading h2 em,
+  .specialty-optometry .book-copy h2 em { color: var(--optometry-gold-light); }
+  .specialty-optometry .optometry-services-intro > p:not(.eyebrow),
+  .specialty-optometry .book-copy > p:not(.eyebrow) { color: #c6cfd6; }
+  .specialty-optometry .optometry-service-card,
+  .specialty-optometry .practice-card,
+  .specialty-optometry .booking-form { color: #f1eee8; border-color: #42505d; background: rgba(27, 41, 54, .96); }
+  .specialty-optometry .optometry-service-card h3,
+  .specialty-optometry .practice-card h3 { color: #f1eee8; }
+  .specialty-optometry .optometry-service-card p { color: #c6cfd6; }
+  .specialty-optometry .optometry-service-card .care-kicker,
+  .specialty-optometry .optometry-service-card .text-link,
+  .specialty-optometry .practice-card a,
+  .specialty-optometry .practice-faq-list summary { color: var(--optometry-gold-light); }
+  .specialty-optometry .booking-form :is(input, select, textarea) { color: #f1eee8; border-color: #53606a; background: #182735; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .specialty-optometry *,
+  .specialty-optometry *::before,
+  .specialty-optometry *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

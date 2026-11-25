@@ -1,0 +1,23 @@
+@page {
+  margin: 16mm;
+}
+
+@media print {
+  :root { color-scheme: light; }
+  body { padding: 0; color: #111; background: #fff; font: 12pt/1.5 Arial, sans-serif; }
+  .site-header, .mobile-actions, .menu-toggle, .booking-form, .specialty-back,
+  .skip-link, .hero-art, .specialty-hero-art, .practice-faq summary::after { display: none !important; }
+  .section-pad { padding-block: 14pt; }
+  .practice-details, .practice-faq, .book-section, .care-section,
+  .specialty-quote, .contact { color: #111; background: #fff; }
+  .practice-card, .practice-emergency, .care-card { break-inside: avoid; color: #111; background: #fff; box-shadow: none; }
+  .practice-emergency p, .practice-emergency h2, .practice-card p, .practice-card li,
+  .practice-faq details p { color: #111; }
+  .practice-details-grid { grid-template-columns: repeat(2, 1fr); }
+  .practice-faq details { break-inside: avoid; }
+  .contact::before, .contact-background { display: none; }
+  a { color: #111; text-decoration: underline; }
+  .site-footer { color: #111; background: #fff; }
+  .site-footer a, .site-footer .compliance-note { color: #111; }
+  img { max-width: 100%; }
+}
